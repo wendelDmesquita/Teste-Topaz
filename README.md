@@ -1,8 +1,8 @@
-#Balanceamento de Servidores - Java
+# Balanceamento de Servidores - Java
 
 Este projeto consiste na alocação de usuários em servidores num ambiente cloud, realizando os balanceamentos para obter o menor custo possível no final das iterações
 
-##Como executar o projeto:
+## Como executar o projeto:
 
 O porjeto foi desenvolvido em Java, na versão 11. Para que ele rode adequadamente, tenha o Java 11 ou superior instalado em sua máquina.
 Para executar, basta clonar o projeto, descompactar e importá-lo em qualqer IDE Java disponível (Recomendo Eclipse IDE).
