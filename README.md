@@ -5,7 +5,7 @@ Este projeto consiste na alocação de usuários em servidores num ambiente clou
 ## Como executar o projeto:
 
 O porjeto foi desenvolvido em Java, na versão 11. Para que ele rode adequadamente, tenha o Java 11 ou superior instalado em sua máquina.
-Para executar, basta clonar o projeto, descompactar e importá-lo em qualqer IDE Java disponível (Recomendo Eclipse IDE).
+Para executar, basta clonar o projeto, descompactar e importá-lo em qualquer IDE Java disponível (Recomendo Eclipse IDE).
 
 O arquivo input.txt encontra-se na pasta raiz do projeto, e caso queira modificá-lo, basta abrir em um editor de texto, alterar as informações e salvá-lo antes de executar o projeto.
 
