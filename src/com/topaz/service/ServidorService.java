@@ -112,7 +112,7 @@ public class ServidorService {
 				i = servidores.size() - 1;
 				if (numUsuariosRestantes <= uMax) {
 					int j = 0;
-					while (j <= numUsuariosRestantes && numUsuariosRestantes > 0) {
+					while (j <= uMax && numUsuariosRestantes > 0) {
 						servidores.get(i).getUsuarios().add(service.criarUsuario());
 						numUsuariosRestantes -= 1;
 						j++;
@@ -189,21 +189,18 @@ public class ServidorService {
 	}
 	
 	public void balancearCarga(ArrayList<Servidor> servidores, Integer uMax) {
-		if(servidores.size() > 1) {
-			for(int i = 0; i < servidores.size(); i++) {
-			int pos = servidores.size() - 1;
-			if(servidores.get(i).getNumUsuarios() < uMax && servidores.get(pos).getNumUsuarios() < uMax && servidores.get(pos) != null) {
-				int j = 0;
-				while(servidores.get(pos).getUsuarios().size() == 0) {
-					servidores.get(i).getUsuarios().add(servidores.get(pos).getUsuarios().get(j));
-					servidores.get(pos).getUsuarios().remove(j);
-					j++;
+		ArrayList<Usuario> aux = new ArrayList<Usuario>();
+		if(servidores.size() > 2) {
+			for(Servidor s : servidores) {
+				ArrayList<Usuario> u = s.getUsuarios();
+				if(u.size() < uMax && aux.size() + u.size() < uMax) {
+					aux.addAll(u);
+					u.removeAll(u);
 				}
-				break;
+				
 			}
+			servidores.get(0).getUsuarios().addAll(aux);
 		}
-		}
-		
 	}
 	
 	public Integer calcularValor(ArrayList<Integer> totalTicks) {

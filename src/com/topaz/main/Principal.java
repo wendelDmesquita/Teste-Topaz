@@ -30,7 +30,6 @@ public class Principal {
 				escreverArquivo(service.exibirUsuariosServidores(servidores)); 
 				service.atualizarTicksServidor(servidores);
 				service.lancarTTask(servidores, tTask);
-				//service.balancearCarga(servidores, uMax);
 				Integer val = service.removerServidor(servidores);
 				
 				if(val > 0) {
@@ -48,7 +47,6 @@ public class Principal {
 				escreverArquivo(service.exibirUsuariosServidores(servidores));
 				service.atualizarTicksServidor(servidores);
 				service.lancarTTask(servidores, tTask);
-				//service.balancearCarga(servidores, uMax);
 				Integer val = service.removerServidor(servidores);
 				
 				if(val > 0) {
